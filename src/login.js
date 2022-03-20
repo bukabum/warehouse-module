@@ -42,7 +42,7 @@ function Login(props) {
           <div style={{margin: "1em", color: "red"}}>{message}</div>
           <Button style={{ float: 'right', backgroundColor: '#2196f3', color: 'white' }} type="submit" onClick={tryLogin}>Login</Button>
           <Link to="/Warehouse-1.0/forgot/password">
-            <Button type="submit" className="btn btn-primary">Lupa Password ?</Button>
+            <Button size="small" disabled type="submit" className="btn btn-primary"></Button>
           </Link>
         </form>
       </div>
