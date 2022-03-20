@@ -35,7 +35,7 @@ handlePage = (event, value) => {
         this.setState({stock: stock.results});
         this.setState({total_pages: stock.total_pages});
         this.setState({ loading: false });
-        this.props.history.push('/full/history/' + this.props.match.params.itemPK + '/?page=' + this.state.page + '&date_added_min=' + this.state.firstDateTime + '&date_added_max=' + this.state.secondDateTime)
+        this.props.history.push('/Warehouse-1.0/full/history/' + this.props.match.params.itemPK + '/?page=' + this.state.page + '&date_added_min=' + this.state.firstDateTime + '&date_added_max=' + this.state.secondDateTime)
       } catch(error){
     }
 }
@@ -67,6 +67,7 @@ componentDidMount() {
         )
        } else {
         return (
+          stock.length > 0 ?
           <div className="divControl">
             <br/>
             <h2 style={{ display: 'inline-block', margin: 0 }}>Full Stock History</h2> 
@@ -170,7 +171,9 @@ componentDidMount() {
 
 
           </div>
-        );
+          :
+          <h1 style={{ textAlign: 'center' }}><b>Belum Ada Histori</b></h1>
+          );
       }
     }
   }

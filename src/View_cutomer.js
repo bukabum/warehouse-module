@@ -79,7 +79,7 @@ async getCustomerOrderHistory () {
         this.setState({ his: his.results });        
         this.setState({ total_pages: his.total_pages });
         this.setState({ loading: false });
-        this.props.history.push('/customer/detail/' + this.props.match.params.cusPK + '/?paid=' + this.state.paid + '&request_order_min=' + this.state.firstDateTime + '&request_order_max=' + this.state.secondDateTime + '&cancel=' + this.state.cancel + '&retur=' + this.state.retur + '&total_amount_min=' + this.state.min_price + '&total_amount_max=' + this.state.max_price + '&order_code=' + this.state.order_code)
+        this.props.history.push('/Warehouse-1.0/customer/detail/' + this.props.match.params.cusPK + '/?paid=' + this.state.paid + '&request_order_min=' + this.state.firstDateTime + '&request_order_max=' + this.state.secondDateTime + '&cancel=' + this.state.cancel + '&retur=' + this.state.retur + '&total_amount_min=' + this.state.min_price + '&total_amount_max=' + this.state.max_price + '&order_code=' + this.state.order_code)
       } catch(error){
     }
 }

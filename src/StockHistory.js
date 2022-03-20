@@ -70,6 +70,7 @@ componentDidMount() {
               </Table>
             </TableContainer>
             <br/><br/>
+          {stock.length > 0 ?
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
@@ -99,6 +100,9 @@ componentDidMount() {
                 </TableBody>
               </Table>
             </TableContainer>
+              : 
+              <h1 style={{ textAlign: 'center' }}><b>Belum Ada Histori Bulanan</b></h1>
+              }
             <br/><br/>
             
             

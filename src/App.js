@@ -41,7 +41,7 @@ function App(props, location) {
     <React.Fragment>
       <Route
         render={({ props, location }) =>
-          window.location.href.replace('http://localhost:3000','') === "/order/invoice/" + window.location.href.replace('http://localhost:3000/order/invoice/','') ? 
+          window.location.href.replace('http://localhost:3000','') === "/Warehouse-1.0/order/invoice/" + window.location.href.replace('http://localhost:3000/Warehouse-1.0/order/invoice/','') ? 
           //props.location.pathname == "/order/invoice/" + id ?
             null
           : 
@@ -50,6 +50,7 @@ function App(props, location) {
         }
     />
       <Switch >
+        <PublicRoute restricted={false} exact path='/'  component={Home} />
         <PublicRoute restricted={false} exact path='/Warehouse-1.0/:page'  component={Home} />
         <PublicRoute restricted={false} exact path='/Warehouse-1.0/'  component={Home} />
         <PublicRoute restricted={true} exact path='/Warehouse-1.0/log/in'  component={Login} />

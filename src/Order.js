@@ -47,7 +47,7 @@ handlePage = (event, value) => {
         console.log(order.results)
         this.setState({order: order.results.filter(Boolean)});
         this.setState({total_pages: order.total_pages});
-        this.props.history.push('/order/list/?page='+this.state.page + '&cancel=' + this.state.cancel + '&creation_date_max=' + this.state.secondDateTime + '&creation_date_min=' + this.state.firstDateTime + '&order_code=' + this.state.order_code + '&page=' + this.state.page + '&paid=' + this.state.paid + '&retur=' + this.state.retur + '&total_amount_max=' + this.state.max_price + '&total_amount_min=' + this.state.min_price)
+        this.props.history.push('/Warehouse-1.0/order/list/?page='+this.state.page + '&cancel=' + this.state.cancel + '&creation_date_max=' + this.state.secondDateTime + '&creation_date_min=' + this.state.firstDateTime + '&order_code=' + this.state.order_code + '&page=' + this.state.page + '&paid=' + this.state.paid + '&retur=' + this.state.retur + '&total_amount_max=' + this.state.max_price + '&total_amount_min=' + this.state.min_price)
         this.setState({ loading: false });
       } catch(error){
     }
@@ -103,6 +103,8 @@ handleSelectRetur = (event) => {
        } else {
       return (
         <div className="divControl">
+        {this.state.order.length > 0 ?
+        <>
           <br/><br/>
           <h2 style={{ display: 'inline-block', margin: 0 }}>List Order</h2> 
           <Button size="large" onClick={() => this.handleFilterDialog()}  style={{ float: 'right' }}>Filter</Button>
@@ -275,7 +277,10 @@ handleSelectRetur = (event) => {
                     </DialogActions>
                 </Dialog>
                 </div>
-
+        </>
+        :
+        <h1 style={{ textAlign: 'center' }}><b>Belum Ada Order</b></h1>
+        }
         </div>
       );
     }

@@ -18,6 +18,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Loading from "./Accessories/Loading";
 import { numberFormat } from "./numberformat";
+import './Style/media.css'
 
 class Home extends Component {
   constructor(props) {
@@ -84,7 +85,7 @@ class Home extends Component {
       axios.get(base+'all/sparepart/?category=' + this.state.category + '&name=' + this.state.name + '&page=' + this.state.page + '&price_max=' + this.state.price_max + '&price_min=' + this.state.price_min + '&product_code=' + this.state.product_code)
       //axios.get(base+'all/sparepart/?&page=' + this.state.page)
       .then(res => {
-            this.props.history.push('/category=' + this.state.category + '&name=' + this.state.name + '&page=' + this.state.page + '&price_max=' + this.state.price_max + '&price_min=' + this.state.price_min + '&product_code=' + this.state.product_code)
+            this.props.history.push('/Warehouse-1.0/category=' + this.state.category + '&name=' + this.state.name + '&page=' + this.state.page + '&price_max=' + this.state.price_max + '&price_min=' + this.state.price_min + '&product_code=' + this.state.product_code)
             const sparepart = res.data;
             this.setState({ sparepart: sparepart.results });
             this.setState({ total_pages: sparepart.total_pages });
@@ -128,7 +129,7 @@ class Home extends Component {
         )
        } else {
           return (
-          <div style={{ marginTop: 25, marginLeft: 'auto', marginRight: 'auto', maxWidth: 1500 }}>
+          <div className="divControl">
             <h1 style={{ display: 'inline-block', margin: 0 }}>List Produk</h1>
             <Button onClick={() => this.handleShow()}  style={{ float: 'right', }}>Filter</Button>
           <br/><br/>
@@ -142,7 +143,7 @@ class Home extends Component {
             >
 
               {this.state.sparepart.map(part => 
-              <Card sx={{ minWidth: 280, maxWidth: 280, marginBottom: 10, marginLeft: 2}}>
+              <Card sx={{ minWidth: 250, maxWidth: 250, marginBottom: 10, marginLeft: 2}}>
                 <CardMedia
                   style={{ maxHeight: 150, height: 150 }}
                   component="img"

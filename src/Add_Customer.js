@@ -52,7 +52,7 @@ class AddCustomer extends Component {
                     provinsi: "",
                     no_hp: "",
                 })        
-                this.props.history.push("/view/customer")
+                this.props.history.push("/Warehouse-1.0/view/customer")
             })
             } catch(error){
         }

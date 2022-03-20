@@ -69,7 +69,7 @@ async newProduct (event) {
                 category: '',
                 image: null,
               })      
-            this.props.history.push("/")
+            this.props.history.push("/Warehouse-1.0")
         })
     }catch (error) {
 

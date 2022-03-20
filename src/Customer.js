@@ -35,7 +35,7 @@ handlePage = (event, value) => {
         this.setState({cus: cus.results});
         this.setState({total_pages: cus.total_pages});
         this.setState({ loading: false });
-        this.props.history.push('/view/customer/?page='+this.state.page + '&alamat=' + this.state.address + '&nama_pelanggan=' + this.state.name + '&no_hp=' + this.state.phone)
+        this.props.history.push('/Warehouse-1.0/view/customer/?page='+this.state.page + '&alamat=' + this.state.address + '&nama_pelanggan=' + this.state.name + '&no_hp=' + this.state.phone)
       } catch(error){
     }
 }
@@ -75,6 +75,8 @@ handleResetDialog = () => {
               <Button size='medium' style={{ float: 'right' }}>Tambah</Button> 
             </Link>
               <Button onClick={this.handleFilterDialog} size='medium' style={{ float: 'right', marginRight: 10 }}>Filter</Button>
+            {cusm.length > 0 ?
+            <>
             {cusm.map(cus => 
             <Card sx={{ minWidth: 275, marginTop: 3 }}>
               <CardContent>
@@ -166,7 +168,10 @@ handleResetDialog = () => {
                     </DialogActions>
                 </Dialog>
                 </div>
-
+          </>
+          :
+          <h1 style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}><b>Belum Ada Data Pelanggan</b></h1>
+          }
           </div>
         );
       }

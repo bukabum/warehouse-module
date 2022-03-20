@@ -38,7 +38,7 @@ async requestOrder () {
         customer: this.state.selected_customer,
         discount: this.state.discount
       }).then(() => {
-        this.props.history.push('/order/list/?page=1')
+        this.props.history.push('/Warehouse-1.0/order/list/?page=1')
       })
     } catch(error){
       this.setState({snackSeverity: 'error'});
