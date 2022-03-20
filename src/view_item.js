@@ -24,6 +24,7 @@ class Viewitem extends Component {
             snackText: "",
             snackSeverity: "",
             loading: true,
+            uploadImage1: null,
         };
         this.getItem = this.getItem.bind(this)
         this.handleSelect = this.handleSelect.bind(this);
@@ -33,7 +34,14 @@ class Viewitem extends Component {
         this.preOrder = this.preOrder.bind(this);
         
     }
-
+    image1  = async (e) => {
+        if(e.target.files[0]){
+        await this.setState({
+            viewImage1: URL.createObjectURL(e.target.files[0]),
+            uploadImage1: e.target.files[0],
+        })}
+    }
+    
       async getItem () {
         try {  
             let item = await axiosInstance.get('view/sparepart/' + this.props.match.params.itemPK + '/')
@@ -46,18 +54,25 @@ class Viewitem extends Component {
     }
 
     async updateItem (event) {
+        let data = new FormData();
         event.preventDefault();
+        data.append('name', this.state.part.name)
+        data.append('description', this.state.part.description)
+        data.append('price', this.state.part.price)
+        data.append('promo_price', this.state.part.promo_price)
+        data.append('category', this.state.category)
+        if (this.state.uploadImage1 !== null) {
+            data.append('image', this.state.uploadImage1)
+        } else {
+            data.append('image', '')
+        }
         try{
-            await axiosInstance.put('view/sparepart/' + this.props.match.params.itemPK + '/', {
-                name: this.state.part.name,
-                description: this.state.part.description,
-                price: this.state.part.price,
-                promo_price: this.state.part.promo_price,
-                category: this.state.category,
+            await axiosInstance.put('view/sparepart/' + this.props.match.params.itemPK + '/', data, {
             }).then(() => {
                 this.setState({
                     openDialog: false
                 });
+                this.getItem()
             })
               
         } catch(error) {
@@ -277,6 +292,11 @@ class Viewitem extends Component {
                     </NativeSelect>
 
                 </FormControl>
+                    <br/><br/>
+                    <Typography>
+                        Gambar Produk
+                    </Typography>
+                <input value={this.state.image} onChange={this.image1} name="product_image" accept="image/*" type="file"/>
             </DialogContent>
             <DialogActions>
             <Button onClick={this.closeEditDialog}>Cancel</Button>

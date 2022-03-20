@@ -130,6 +130,7 @@ class Home extends Component {
        } else {
           return (
           <div className="divControl">
+          <br/>
             <h1 style={{ display: 'inline-block', margin: 0 }}>List Produk</h1>
             <Button onClick={() => this.handleShow()}  style={{ float: 'right', }}>Filter</Button>
           <br/><br/>
@@ -137,13 +138,13 @@ class Home extends Component {
               container
               spacing={0}
               direction="row"
-              alignItems="center"
+
               justifyContent="center"
               style={{ minHeight: '100vh' }}
             >
 
               {this.state.sparepart.map(part => 
-              <Card sx={{ minWidth: 250, maxWidth: 250, marginBottom: 10, marginLeft: 2}}>
+              <Card sx={{ minWidth: 250, maxWidth: 250, marginBottom: 10, marginLeft: 2, maxHeight: 350 }}>
                 <CardMedia
                   style={{ maxHeight: 150, height: 150 }}
                   component="img"

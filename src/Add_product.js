@@ -45,8 +45,7 @@ image1  = async (e) => {
         uploadImage1: e.target.files[0],
     })}
 }
-async newProduct (event) {
-    console.log(this.state.uploadImage1)
+async newProduct (event) {    
     let data = new FormData();
     event.preventDefault();
     data.append('name', this.state.name)

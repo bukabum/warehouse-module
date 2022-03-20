@@ -13,7 +13,8 @@ class AddCustomer extends Component {
         page: 1,
         snack: false,
         snackText: "",
-        snackSeverity: ""
+        snackSeverity: "",
+        note: "",
       };
       this.postCustomer = this.postCustomer.bind(this)
       this.handleChange = this.handleChange.bind(this)
@@ -76,6 +77,7 @@ class AddCustomer extends Component {
             <TextField name="note" onChange={this.handleChange} multiline rows={10} label="Catatan" fullwidth style={{ width: '100%' }}/>
                 <br/><br/>
             <Button type='submit' style={{ float: 'right' }}>Submit</Button>
+                <br/><br/>
           </form>
             <Snackbar open={this.state.snack} autoHideDuration={6000} onClose={this.handleClose}>
                 <Alert onClose={this.handleClose} severity={this.state.snackSeverity} sx={{ width: '100%' }}>
