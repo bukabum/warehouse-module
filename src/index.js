@@ -7,7 +7,7 @@ import ResponsiveAppBar from "./Header";
 import { HashRouter, BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
-<HashRouter>  
+<HashRouter basename='/'>  
   <React.StrictMode>
       <App />
   </React.StrictMode>
