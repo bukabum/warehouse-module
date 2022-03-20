@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormControl, Select, InputLabel, MenuItem, TextField, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent, Stack, Pagination, Button, Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Loading from "./Accessories/Loading";
 import './Style/media.css'
 
@@ -71,7 +71,7 @@ handleResetDialog = () => {
           <div className="divControl">
             <br/><br/>
             <h2 style={{ display: 'inline-block', margin: 0 }}>Data Pelanggan</h2> 
-            <Link to="/add/customer">
+            <Link to="/Warehouse-1.0/add/customer">
               <Button size='medium' style={{ float: 'right' }}>Tambah</Button> 
             </Link>
               <Button onClick={this.handleFilterDialog} size='medium' style={{ float: 'right', marginRight: 10 }}>Filter</Button>
@@ -91,7 +91,7 @@ handleResetDialog = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link style={{ textDecoration: 'none' }} to={"/customer/detail/" + cus.pk}>
+                <Link style={{ textDecoration: 'none' }} to={"/Warehouse-1.0/customer/detail/" + cus.pk}>
                   <Button size="small">Lihat</Button>
                 </Link>
               </CardActions>

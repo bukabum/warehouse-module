@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import login_api from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { axiosInstance } from './navbar/auth/token/Api';
 import { TextField, Button } from '@mui/material';
 import './Style/media.css'
@@ -41,7 +41,7 @@ function Login(props) {
           <TextField type="password" required fullWidth id="outlined-basic" label="Password" variant="outlined" onChange={(e)=>{setPassword(e.target.value)}} value={password}/>
           <div style={{margin: "1em", color: "red"}}>{message}</div>
           <Button style={{ float: 'right', backgroundColor: '#2196f3', color: 'white' }} type="submit" onClick={tryLogin}>Login</Button>
-          <Link to="/forgot/password">
+          <Link to="/Warehouse-1.0/forgot/password">
             <Button type="submit" className="btn btn-primary">Lupa Password ?</Button>
           </Link>
         </form>

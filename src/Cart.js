@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Snackbar, Alert, Autocomplete, TextField, Stack, Pagination, Button, Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { numberFormat } from "./numberformat";
 import Loading from "./Accessories/Loading";
 import './Style/media.css'

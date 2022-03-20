@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Select, InputLabel, FormControl, MenuItem, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent, TextField, Stack, Pagination, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { numberFormat } from "./numberformat";
 import Loading from "./Accessories/Loading";
 import DatePicker from '@mui/lab/DatePicker';
@@ -178,7 +178,7 @@ handleSelectRetur = (event) => {
             <Card sx={{ marginTop: 3 }}>
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  <Link style={{ textDecoration: 'none' }} to={"/order/detail/" + him.pk }>Order - { him.order_code }</Link>
+                  <Link style={{ textDecoration: 'none' }} to={"/Warehouse-1.0/order/detail/" + him.pk }>Order - { him.order_code }</Link>
                 </Typography>
                 <Typography>
                   <p>Status Pembayaran: {him.retur ? 'Pesanan Di Retur' : him.cancel ? 'Pesanan Dibatalkan' : him.paid ? 'Lunas' : 'Belum Lunas'}</p>

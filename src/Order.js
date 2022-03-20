@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { InputLabel, Select, MenuItem, FormControl, Dialog, DialogTitle, DialogContentText, DialogActions, TextField, DialogContent, Stack, Pagination, Button, Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { numberFormat } from './numberformat';
 import Loading from "./Accessories/Loading";
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -123,7 +123,7 @@ handleSelectRetur = (event) => {
                 </Typography>
               </CardContent>
               <CardActions>
-              <Link to={'/order/detail/' + item.pk} style={{ textDecoration: 'none' }}>
+              <Link to={'/Warehouse-1.0/order/detail/' + item.pk} style={{ textDecoration: 'none' }}>
                   <Button>Lihat Order</Button>
                 </Link>
               </CardActions>

@@ -4,7 +4,7 @@ const cookies = new Cookies();
 
 const login_api = async (username, password, success, fail) => {
     const response = await fetch(
-          `http://localhost:8000/rest/api/token/`,
+          `https://kimmerson.pythonanywhere.com/rest/api/token/`,
           {
               method: 'POST',
               headers: {
@@ -41,9 +41,9 @@ export const isLogin = () => {
 
     return false;
 }
-export const base = 'http://localhost:8000/rest/'
+export const base = 'https://kimmerson.pythonanywhere.com/rest/'
 
-const baseURL = 'http://localhost:8000/rest/'
+const baseURL = 'https://kimmerson.pythonanywhere.com/rest/'
 
 let isRefreshing = false;
 let failedQueue = [];

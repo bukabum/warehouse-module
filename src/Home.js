@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 //import Carousel from 'react-material-ui-carousel'
 import { TextField, Button, Grid, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent } from "@mui/material";
 import Card from '@mui/material/Card';
@@ -150,7 +150,7 @@ class Home extends Component {
                   image={part.image}
                 />
                 <CardContent>
-                <Link style={{ textDecoration: 'none' }} to={'view/item/' + part.pk} >
+                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-1.0/view/item/' + part.pk} >
                   <Typography gutterBottom variant="h5" component="div">
                     { part.name }
                   </Typography>

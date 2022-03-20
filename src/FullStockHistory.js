@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TextField, FormControl, MenuItem, Select, InputLabel, Dialog, DialogTitle, DialogContentText, DialogActions, DialogContent, Stack, Pagination, Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Loading from "./Accessories/Loading";
 import DatePicker from '@mui/lab/DatePicker';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -70,7 +70,7 @@ componentDidMount() {
           <div className="divControl">
             <br/>
             <h2 style={{ display: 'inline-block', margin: 0 }}>Full Stock History</h2> 
-            <Link to={"/monthly/history/" + this.props.match.params.itemPK }>
+            <Link to={"/Warehouse-1.0/monthly/history/" + this.props.match.params.itemPK }>
               <Button size='medium' style={{ float: 'right' }}>Stock Bulanan</Button> 
             </Link>
               <Button onClick={this.handleFilterDialog} size='medium' style={{ float: 'right', marginRight: 10 }}>Filter</Button>

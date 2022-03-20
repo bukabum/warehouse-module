@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Snackbar, Alert, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Stack, Pagination, Button, Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { numberFormat } from './numberformat';
 import CancelDialog from './Dialog/CancelOrder';
 import Instalment from './Dialog/Instalment';
@@ -136,7 +136,7 @@ useEffect (() => {
                             <h2>Order - {order.order_code}</h2>
                         </Typography>
                         <Typography>
-                            <p>Nama Pemesan: <Link style={{ textDecoration: 'none' }} to={"/customer/detail/" + order.customer.id}>{order.customer ? order.customer.nama_pelanggan : '' }</Link></p>
+                            <p>Nama Pemesan: <Link style={{ textDecoration: 'none' }} to={"/Warehouse-1.0/customer/detail/" + order.customer.id}>{order.customer ? order.customer.nama_pelanggan : '' }</Link></p>
                             <p>Alamat: {order.customer ? order.customer.alamat : '' }, {order.customer ? order.customer.kota : '' }, {order.customer ? order.customer.provinsi : ''}</p>
                             <p>No Hp: {order.customer ? order.customer.no_hp : ''}</p>
                             <p>Status Pembayaran: {order.retur ? 'Pesanan Di Retur' : order.cancel ? 'Pesanan Dibatalkan' : order.paid ? 'Lunas' : 'Belum Lunas'}</p>
@@ -167,7 +167,7 @@ useEffect (() => {
                             : null }
                         </Typography>
                     <CardActions>
-                        <Link to={"/order/invoice/" + props.match.params.itemPK} style={{ textDecoration: 'none' }}><Button>Invoice</Button></Link>
+                        <Link to={"/Warehouse-1.0/order/invoice/" + props.match.params.itemPK} style={{ textDecoration: 'none' }}><Button>Invoice</Button></Link>
                         {order.retur ? '' : order.cancel ? '' : order.paid ? <Button onClick={() => handlePaidOff(order.pk)}>Histori Pelunasan</Button> : <Button onClick={() => handlePaidOff(order.pk)}>Pelunasan</Button>}
                         {order.paid ? <Button onClick={() => handleInstalment(order.pk)} >Histori Pembayaran</Button>  : order.retur ? <Button onClick={() => handleInstalment(order.pk, order.paid, order.paid_proof)} >Histori Pembayaran</Button>  : order.cancel ? <Button onClick={() => handleInstalment(order.pk)} >Histori Pembayaran</Button> : <Button onClick={() => handleInstalment(order.pk)} >Pembayaran</Button>}
                         {order.paid ? '' : order.retur ? '' : order.cancel ? '' : <Button onClick={() => handleOpenCancel(order.pk)} style={{color: 'red'}}>Batalkan</Button>}{order.retur ? '' : order.cancel ? '' : order.paid ? <Button onClick={() => handleOpenReturn(order.pk)} style={{color: 'red'}}>Retur</Button> : ''}
@@ -230,8 +230,6 @@ useEffect (() => {
 
                 </CardContent>
                 <CardActions>
-                <Link style={{ textDecoration: 'none' }}>
-                    </Link>
                 </CardActions>
             </Card> 
         )}

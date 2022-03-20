@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { useLocation, BrowserRouter as Router, Switch, Route, Link, withRouter, useRouteMatch } from 'react-router-dom';
+import { useLocation, BrowserRouter as Router, Switch , Route, Link, useRouteMatch } from 'react-router-dom';
 import PrivateRoute from "./navbar/auth/components/PrivateRoute";
 import PublicRoute from "./navbar/auth/components/PublicRoute";
 import Home from './Home';
@@ -49,29 +49,29 @@ function App(props, location) {
           
         }
     />
-      <Switch>
-        <PublicRoute restricted={false} exact path='/:page'  component={Home} />
-        <PublicRoute restricted={false} exact path='/'  component={Home} />
-        <PublicRoute restricted={true} exact path='/log/in'  component={Login} />
+      <Switch >
+        <PublicRoute restricted={false} exact path='Warehouse-1.0/:page'  component={Home} />
+        <PublicRoute restricted={false} exact path='Warehouse-1.0/'  component={Home} />
+        <PublicRoute restricted={true} exact path='Warehouse-1.0/log/in'  component={Login} />
         
-        <PrivateRoute restricted={false} exact path='/view/item/:itemPK'  component={Viewitem} />
-        <PrivateRoute restricted={false} exact path='/view/customer' component={Customer} />
-        <PrivateRoute restricted={false} exact path='/customer/detail/:cusPK' component={ViewCustomer} />
-        <PrivateRoute restricted={false} exact path='/add/product/' component={AddProduct} />
-        <PrivateRoute restricted={false} exact path='/order/list/' component={Order} />
-        <PrivateRoute restricted={false} exact path='/cart/list' component={Cart} />
-        <PrivateRoute restricted={false} exact path='/add/customer' component={AddCustomer} />
-        <PrivateRoute restricted={false} exact path='/stock/in/:itemPK' component={StockIn} />
-        <PrivateRoute restricted={false} exact path='/stock/out/:itemPK' component={StockOut} />
-        <PrivateRoute restricted={false} exact path='/monthly/history/:itemPK' component={StockHistory} />
-        <PrivateRoute restricted={false} exact path='/full/history/:itemPK' component={FullHistory} />
-        <PrivateRoute restricted={false} exact path='/order/detail/:itemPK' component={OrderDetail} />
-        <PrivateRoute restricted={false} exact path='/order/invoice/:orderPK' component={Invoice} />
-        <PrivateRoute restricted={false} exact path='/bulk/in' component={BulkIn} />
-        <PrivateRoute restricted={false} exact path='/bulk/out' component={BulkOut} />
-        <PrivateRoute restricted={false} exact path='/bulk/cart' component={BulkCart} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/view/item/:itemPK'  component={Viewitem} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/view/customer' component={Customer} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/customer/detail/:cusPK' component={ViewCustomer} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/add/product/' component={AddProduct} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/order/list/' component={Order} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/cart/list' component={Cart} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/add/customer' component={AddCustomer} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/stock/in/:itemPK' component={StockIn} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/stock/out/:itemPK' component={StockOut} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/monthly/history/:itemPK' component={StockHistory} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/full/history/:itemPK' component={FullHistory} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/order/detail/:itemPK' component={OrderDetail} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/order/invoice/:orderPK' component={Invoice} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/bulk/in' component={BulkIn} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/bulk/out' component={BulkOut} />
+        <PrivateRoute restricted={false} exact path='Warehouse-1.0/bulk/cart' component={BulkCart} />
         
-      </Switch>
+      </Switch >
     </React.Fragment>
     );
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, TableBody, Button, Box, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Loading from "./Accessories/Loading";
 import './Style/media.css'
 
@@ -46,7 +46,7 @@ componentDidMount() {
         <div className="divControl">
           <br/>
           <h2 style={{ display: 'inline-block', margin: 0 }}>Monthly Stock History</h2>
-          <Link to={"/full/history/" + this.props.match.params.itemPK }>
+          <Link to={"/Warehouse-1.0/full/history/" + this.props.match.params.itemPK }>
             <Button size='medium' style={{ float: 'right' }}>Semua History</Button> 
           </Link>
           <br/><br/>

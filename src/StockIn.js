@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Snackbar, Alert, Stack, Pagination, Button, Box, Card, CardActions, CardContent, Typography, TextField } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './Style/media.css'
 
 class StockIn extends Component {
@@ -52,7 +52,7 @@ handleChange(event) {
                 <br/><br/>
             <TextField value={this.state.description} onChange={this.handleChange} name='description' multiline rows={10} label="Keterangan / Alasan" required fullwidth style={{ width: '100%' }}/>
                 <br/><br/>
-            <Link style={{ textDecoration: 'none' }} to={'/view/item/'+this.props.match.params.itemPK}>
+            <Link style={{ textDecoration: 'none' }} to={'/Warehouse-1.0/view/item/'+this.props.match.params.itemPK}>
               <Button>Lihat Barang</Button>
             </Link>
             <Button type='submit' style={{ float: 'right' }}>Submit</Button>

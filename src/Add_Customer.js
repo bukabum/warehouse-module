@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Alert, TextField, Stack, Button, Snackbar, MuiAlert, CardActions, CardContent, Typography } from '@mui/material';
 import { axiosInstance } from './navbar/auth/token/Api';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './Style/media.css'
 
 class AddCustomer extends Component {
