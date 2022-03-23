@@ -46,7 +46,7 @@ componentDidMount() {
         <div className="divControl">
           <br/>
           <h2 style={{ display: 'inline-block', margin: 0 }}>Monthly Stock History</h2>
-          <Link to={"/Warehouse-1.0/full/history/" + this.props.match.params.itemPK }>
+          <Link to={"/Warehouse-Customer/full/history/" + this.props.match.params.itemPK }>
             <Button size='medium' style={{ float: 'right' }}>Semua History</Button> 
           </Link>
           <br/><br/>

@@ -79,7 +79,7 @@ async getCustomerOrderHistory () {
         this.setState({ his: his.results });        
         this.setState({ total_pages: his.total_pages });
         this.setState({ loading: false });
-        this.props.history.push('/Warehouse-1.0/customer/detail/' + this.props.match.params.cusPK + '/?paid=' + this.state.paid + '&request_order_min=' + this.state.firstDateTime + '&request_order_max=' + this.state.secondDateTime + '&cancel=' + this.state.cancel + '&retur=' + this.state.retur + '&total_amount_min=' + this.state.min_price + '&total_amount_max=' + this.state.max_price + '&order_code=' + this.state.order_code)
+        this.props.history.push('/Warehouse-Customer/customer/detail/' + this.props.match.params.cusPK + '/?paid=' + this.state.paid + '&request_order_min=' + this.state.firstDateTime + '&request_order_max=' + this.state.secondDateTime + '&cancel=' + this.state.cancel + '&retur=' + this.state.retur + '&total_amount_min=' + this.state.min_price + '&total_amount_max=' + this.state.max_price + '&order_code=' + this.state.order_code)
       } catch(error){
     }
 }
@@ -178,7 +178,7 @@ handleSelectRetur = (event) => {
             <Card sx={{ marginTop: 3 }}>
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  <Link style={{ textDecoration: 'none' }} to={"/Warehouse-1.0/order/detail/" + him.pk }>Order - { him.order_code }</Link>
+                  <Link style={{ textDecoration: 'none' }} to={"/Warehouse-Customer/order/detail/" + him.pk }>Order - { him.order_code }</Link>
                 </Typography>
                 <Typography>
                   <p>Status Pembayaran: {him.retur ? 'Pesanan Di Retur' : him.cancel ? 'Pesanan Dibatalkan' : him.paid ? 'Lunas' : 'Belum Lunas'}</p>

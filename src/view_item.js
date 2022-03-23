@@ -183,13 +183,13 @@ class Viewitem extends Component {
             </CardContent>
             <CardActions>
                 <Button onClick={() => this.editDialog()} style={{ backgroundColor: '#0275d8', color: 'white' }} variant="contained" size="small">Edit</Button>
-                <Link style={{ textDecoration: 'none', marginLeft: 8 }} to={'/Warehouse-1.0/stock/out/' + part.pk}>
+                <Link style={{ textDecoration: 'none', marginLeft: 8 }} to={'/Warehouse-Customer/stock/out/' + part.pk}>
                     <Button style={{ backgroundColor: '#0275d8', color: 'white' }} variant="contained" size="small">Stok Keluar</Button>
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-1.0/stock/in/' + part.pk}>
+                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-Customer/stock/in/' + part.pk}>
                     <Button style={{ backgroundColor: '#0275d8', color: 'white' }} variant="contained" size="small">Stok Masuk</Button>
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-1.0/monthly/history/' + part.pk}>
+                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-Customer/monthly/history/' + part.pk}>
                     <Button style={{ backgroundColor: '#0275d8', color: 'white' }} variant="contained" size="small">History</Button>
                 </Link>
                 {part.stock == 0 ?

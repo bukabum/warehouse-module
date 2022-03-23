@@ -35,7 +35,7 @@ handlePage = (event, value) => {
         this.setState({stock: stock.results});
         this.setState({total_pages: stock.total_pages});
         this.setState({ loading: false });
-        this.props.history.push('/Warehouse-1.0/full/history/' + this.props.match.params.itemPK + '/?page=' + this.state.page + '&date_added_min=' + this.state.firstDateTime + '&date_added_max=' + this.state.secondDateTime)
+        this.props.history.push('/Warehouse-Customer/full/history/' + this.props.match.params.itemPK + '/?page=' + this.state.page + '&date_added_min=' + this.state.firstDateTime + '&date_added_max=' + this.state.secondDateTime)
       } catch(error){
     }
 }
@@ -71,7 +71,7 @@ componentDidMount() {
           <div className="divControl">
             <br/>
             <h2 style={{ display: 'inline-block', margin: 0 }}>Full Stock History</h2> 
-            <Link to={"/Warehouse-1.0/monthly/history/" + this.props.match.params.itemPK }>
+            <Link to={"/Warehouse-Customer/monthly/history/" + this.props.match.params.itemPK }>
               <Button size='medium' style={{ float: 'right' }}>Stock Bulanan</Button> 
             </Link>
               <Button onClick={this.handleFilterDialog} size='medium' style={{ float: 'right', marginRight: 10 }}>Filter</Button>

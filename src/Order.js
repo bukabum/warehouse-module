@@ -47,7 +47,7 @@ handlePage = (event, value) => {
         console.log(order.results)
         this.setState({order: order.results.filter(Boolean)});
         this.setState({total_pages: order.total_pages});
-        this.props.history.push('/Warehouse-1.0/order/list/?page='+this.state.page + '&cancel=' + this.state.cancel + '&creation_date_max=' + this.state.secondDateTime + '&creation_date_min=' + this.state.firstDateTime + '&order_code=' + this.state.order_code + '&page=' + this.state.page + '&paid=' + this.state.paid + '&retur=' + this.state.retur + '&total_amount_max=' + this.state.max_price + '&total_amount_min=' + this.state.min_price)
+        this.props.history.push('/Warehouse-Customer/order/list/?page='+this.state.page + '&cancel=' + this.state.cancel + '&creation_date_max=' + this.state.secondDateTime + '&creation_date_min=' + this.state.firstDateTime + '&order_code=' + this.state.order_code + '&page=' + this.state.page + '&paid=' + this.state.paid + '&retur=' + this.state.retur + '&total_amount_max=' + this.state.max_price + '&total_amount_min=' + this.state.min_price)
         this.setState({ loading: false });
       } catch(error){
     }
@@ -125,7 +125,7 @@ handleSelectRetur = (event) => {
                 </Typography>
               </CardContent>
               <CardActions>
-              <Link to={'/Warehouse-1.0/order/detail/' + item.pk} style={{ textDecoration: 'none' }}>
+              <Link to={'/Warehouse-Customer/order/detail/' + item.pk} style={{ textDecoration: 'none' }}>
                   <Button>Lihat Order</Button>
                 </Link>
               </CardActions>

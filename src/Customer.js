@@ -35,7 +35,7 @@ handlePage = (event, value) => {
         this.setState({cus: cus.results});
         this.setState({total_pages: cus.total_pages});
         this.setState({ loading: false });
-        this.props.history.push('/Warehouse-1.0/view/customer/?page='+this.state.page + '&alamat=' + this.state.address + '&nama_pelanggan=' + this.state.name + '&no_hp=' + this.state.phone)
+        this.props.history.push('/Warehouse-Customer/view/customer/?page='+this.state.page + '&alamat=' + this.state.address + '&nama_pelanggan=' + this.state.name + '&no_hp=' + this.state.phone)
       } catch(error){
     }
 }
@@ -71,7 +71,7 @@ handleResetDialog = () => {
           <div className="divControl">
             <br/><br/>
             <h2 style={{ display: 'inline-block', margin: 0 }}>Data Pelanggan</h2> 
-            <Link to="/Warehouse-1.0/add/customer">
+            <Link to="/Warehouse-Customer/add/customer">
               <Button size='medium' style={{ float: 'right' }}>Tambah</Button> 
             </Link>
               <Button onClick={this.handleFilterDialog} size='medium' style={{ float: 'right', marginRight: 10 }}>Filter</Button>
@@ -93,7 +93,7 @@ handleResetDialog = () => {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Link style={{ textDecoration: 'none' }} to={"/Warehouse-1.0/customer/detail/" + cus.pk}>
+                <Link style={{ textDecoration: 'none' }} to={"/Warehouse-Customer/customer/detail/" + cus.pk}>
                   <Button size="small">Lihat</Button>
                 </Link>
               </CardActions>

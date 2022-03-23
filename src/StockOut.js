@@ -54,7 +54,7 @@ handleChange(event) {
                 <br/><br/>
             <TextField value={this.state.description} onChange={this.handleChange} name='description' multiline rows={10} label="Keterangan / Alasan" required fullwidth style={{ width: '100%' }}/>
                 <br/><br/>
-            <Link style={{ textDecoration: 'none' }} to={'/Warehouse-1.0/view/item/'+this.props.match.params.itemPK}>
+            <Link style={{ textDecoration: 'none' }} to={'/Warehouse-Customer/view/item/'+this.props.match.params.itemPK}>
               <Button>Lihat Barang</Button>
             </Link>
               <Button type='submit' style={{ float: 'right' }}>Submit</Button>

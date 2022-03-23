@@ -71,7 +71,7 @@ if(token) {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0">
+        <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer">
             <Typography
                 variant="h6"
                 noWrap
@@ -117,25 +117,25 @@ if(token) {
              }} 
             
             >
-            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-1.0/add/product/">
+            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-Customer/add/product/">
               <MenuItem disableRipple={true} style={{ marginLeft: 10 }}  onClick={handleCloseNavMenu}>
                   <Typography style={{ color: 'black' }}>Tambah Produk</Typography>
               </MenuItem>
             </Link>
             <br/>
-            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-1.0/cart/list">
+            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-Customer/cart/list">
               <MenuItem disableRipple={true} style={{ marginLeft: 10 }} onClick={handleCloseNavMenu}>
                   <Typography style={{ color: 'black' }}>Keranjang</Typography>
               </MenuItem>
             </Link>
             <br/>
-            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-1.0/order/list">
+            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-Customer/order/list">
               <MenuItem disableRipple={true} style={{ marginLeft: 10 }} textAlign="center" onClick={handleCloseNavMenu}>
                   <Typography style={{ color: 'black' }}>Order</Typography>
               </MenuItem>
             </Link>
             <br/>
-            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-1.0/view/customer">
+            <Link disableRipple={true} style={{ textDecoration: 'none' }} to="/Warehouse-Customer/view/customer">
               <MenuItem disableRipple={true} style={{ marginLeft: 10 }} onClick={handleCloseNavMenu}>
                   <Typography style={{ color: 'black' }}>Pelanggan</Typography>
               </MenuItem>
@@ -152,21 +152,21 @@ if(token) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-          <Link style={{ textDecoration: 'none', color: 'white' }} to="/Warehouse-1.0">
+          <Link style={{ textDecoration: 'none', color: 'white' }} to="/Warehouse-Customer">
             Warehouse 1.0
           </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/add/product/">
+            <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/add/product/">
               <Button style={{ my: 2, color: 'white', display: 'block' }}>Tambah Produk</Button>
             </Link>
-            <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/cart/list">
+            <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/cart/list">
               <Button style={{ my: 2, color: 'white', display: 'block' }}>Keranjang</Button>
             </Link>
-            <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/order/list">
+            <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/order/list">
               <Button style={{ my: 2, color: 'white', display: 'block' }}>Order</Button>
             </Link>
-            <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/view/customer">
+            <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/view/customer">
               <Button style={{ my: 2, color: 'white', display: 'block' }}>Pelanggan</Button>
             </Link>
               <Button onClick={handleOpenBulkMenu} style={{ my: 2, color: 'white', display: 'block' }}>Bulk</Button>
@@ -187,17 +187,17 @@ if(token) {
                 open={Boolean(anchorElBulk)}
                 onClose={handleCloseBulkMenu}
             >
-                <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/bulk/in">
+                <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/bulk/in">
                   <MenuItem disableRipple={true} onClick={handleCloseBulkMenu}>
                     <Button style={{ my: 2, color: 'black', display: 'block' }}>Bulk In</Button>
                   </MenuItem>
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/bulk/out">
+                <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/bulk/out">
                   <MenuItem disableRipple={true} onClick={handleCloseBulkMenu}>
                     <Button style={{ my: 2, color: 'black', display: 'block' }}>Bulk Out</Button>
                   </MenuItem>
                 </Link>
-                <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/bulk/cart">
+                <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/bulk/cart">
                   <MenuItem disableRipple={true} onClick={handleCloseBulkMenu}>
                     <Button style={{ my: 2, color: 'black', display: 'block' }}>Bulk Cart</Button>
                   </MenuItem>
@@ -222,7 +222,7 @@ if(token) {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0">
+        <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer">
             <Typography
                 variant="h6"
                 noWrap
@@ -238,7 +238,7 @@ if(token) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-          <Link style={{ textDecoration: 'none', color: 'white' }} to="/Warehouse-1.0">
+          <Link style={{ textDecoration: 'none', color: 'white' }} to="/Warehouse-Customer">
             Warehouse 1.0
           </Link>
           </Typography>
@@ -247,7 +247,7 @@ if(token) {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Pengaturan">
-            <Link style={{ textDecoration: 'none' }} to="/Warehouse-1.0/log/in/">
+            <Link style={{ textDecoration: 'none' }} to="/Warehouse-Customer/log/in/">
               <Button style={{ my: 2, color: 'white', display: 'block' }}>Login</Button>
             </Link>
             </Tooltip>
