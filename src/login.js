@@ -41,7 +41,7 @@ function Login(props) {
           <TextField type="password" required fullWidth id="outlined-basic" label="Password" variant="outlined" onChange={(e)=>{setPassword(e.target.value)}} value={password}/>
           <div style={{margin: "1em", color: "red"}}>{message}</div>
           <Button style={{ float: 'right', backgroundColor: '#2196f3', color: 'white' }} type="submit" onClick={tryLogin}>Login</Button>
-          <Link to="/Warehouse-1.0/forgot/password">
+          <Link to="/Warehouse-Customer/forgot/password">
             <Button size="small" disabled type="submit" className="btn btn-primary"></Button>
           </Link>
         </form>

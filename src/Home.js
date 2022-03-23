@@ -85,7 +85,7 @@ class Home extends Component {
       axios.get(base+'all/sparepart/?category=' + this.state.category + '&name=' + this.state.name + '&page=' + this.state.page + '&price_max=' + this.state.price_max + '&price_min=' + this.state.price_min + '&product_code=' + this.state.product_code)
       //axios.get(base+'all/sparepart/?&page=' + this.state.page)
       .then(res => {
-            this.props.history.push('/Warehouse-1.0/category=' + this.state.category + '&name=' + this.state.name + '&page=' + this.state.page + '&price_max=' + this.state.price_max + '&price_min=' + this.state.price_min + '&product_code=' + this.state.product_code)
+            this.props.history.push('/Warehouse-Customer/category=' + this.state.category + '&name=' + this.state.name + '&page=' + this.state.page + '&price_max=' + this.state.price_max + '&price_min=' + this.state.price_min + '&product_code=' + this.state.product_code)
             const sparepart = res.data;
             this.setState({ sparepart: sparepart.results });
             this.setState({ total_pages: sparepart.total_pages });
@@ -152,7 +152,7 @@ class Home extends Component {
                   image={part.image}
                 />
                 <CardContent>
-                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-1.0/view/item/' + part.pk} >
+                <Link style={{ textDecoration: 'none' }} to={'/Warehouse-Customer/view/item/' + part.pk} >
                   <Typography gutterBottom variant="h5" component="div">
                     { part.name }
                   </Typography>
